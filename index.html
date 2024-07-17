@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .content{
+            background-color: blueviolet; 
+            text-align: center; 
+            transition: all 0.7s linear;
+        }
+        .counter-numbers{
+            font-size: 4.3rem;
+        }
+        /* button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .rotate {
+            animation: rotate 1s linear;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .loading-icon {
+            width: 3rem;
+            margin-left: 10px;
+        } */
+
+    </style>
+    <script>
+   
+   //Here it will count particularly 
+   
+//     document.addEventListener("DOMContentLoaded", () => {
+//     const counterNum = document.querySelectorAll(".counter-numbers");
+
+//     const speed = 200;
+
+//     counterNum.forEach((curElem) => {
+        
+//         const updateNumber = () => {
+//             const targetNumber = parseInt(curElem.dataset.number);
+//            // console.log(targetNumber);  
+//            const initialNum = parseInt(curElem.innerText);
+//           // console.log(initialNum);
+//           const incrementNumber = Math.trunc(targetNumber/speed);
+//           // console.log(incrementNumber);
+
+//           if(initialNum<targetNumber){
+//             curElem.innerText =initialNum + incrementNumber;
+            
+//             setTimeout(updateNumber,10);
+//           }
+//         };
+
+//         updateNumber();
+//     });
+// });
+
+//this code is for button rotating 
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//             const startButton = document.getElementById("startButton");
+//             const loadingIcon = document.querySelector(".loading-icon");
+
+//             startButton.addEventListener("click", () => {
+//                 loadingIcon.classList.add("rotate");
+
+//                 // Remove the class after animation ends to allow re-triggering
+//                 loadingIcon.addEventListener('animationend', () => {
+//                     loadingIcon.classList.remove("rotate");
+//                 }, { once: true });
+//             });
+//         });
+
+//Here it is a code for counting animation when refresh the page:- 
+
+         document.addEventListener("DOMContentLoaded", () => {
+             const counterNum = document.querySelectorAll(".counter-numbers");
+             const speed = 80; // Adjust the speed as needed
+
+             counterNum.forEach((curElem) => {
+                 const updateNumber = () => {
+                     const targetNumber = parseInt(curElem.dataset.number);
+                     const increment = targetNumber / speed;
+                     let currentNumber = 0;
+
+                     const countUp = () => {
+                         currentNumber += increment;
+                         if (currentNumber < targetNumber) {
+                             curElem.innerText = Math.ceil(currentNumber);
+                             requestAnimationFrame(countUp);
+                         } else {
+                             curElem.innerText = targetNumber;
+                         }
+                     };
+
+                     countUp();
+                 };
+
+                 updateNumber();
+             });
+         });
+
+
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, fugiat? Libero tempora in asperiores ipsa dignissimos accusamus iusto laudantium distinctio voluptatibus? Non illo pariatur consectetur cumque ratione et rerum, corrupti at numquam accusantium deleniti, explicabo ad nostrum saepe sequi ducimus error distinctio facere atque optio magnam quos sit fugiat repellat? Neque deleniti consequatur fugit eius officia quisquam dicta, odit eum nobis, eaque ipsa deserunt rem! Laboriosam incidunt odio non consequatur facilis? Nisi quasi quis ipsum voluptatum dolorem, commodi quia quod. Doloremque expedita reprehenderit incidunt earum molestiae quae, obcaecati aspernatur omnis asperiores. Modi aut culpa, mollitia excepturi illum qui expedita? Laboriosam excepturi fuga porro beatae ex adipisci rem officia labore. Architecto odio eius ea, rerum praesentium earum placeat? Ratione odio aperiam nulla illum asperiores nihil omnis officia quibusdam illo delectus accusamus, incidunt quis quisquam consectetur aspernatur impedit dignissimos commodi qui, itaque architecto cupiditate. Dolor voluptate vel officia itaque! Ullam numquam nam veniam iusto possimus sequi et veritatis aliquam, explicabo beatae asperiores magnam, harum quia voluptatum blanditiis similique optio delectus id at. Blanditiis hic neque quibusdam minus perferendis id explicabo eos sed ipsam? Sit mollitia dolorem, aliquam numquam dolorum dicta similique in natus perferendis incidunt ut consequatur impedit adipisci earum non nihil, asperiores sed, porro reprehenderit! Eius est neque accusamus quaerat eligendi aperiam expedita iste corrupti libero quibusdam. Cupiditate rerum ipsum, porro beatae quas perspiciatis ut consequuntur, quod sit voluptatum eaque corrupti. Nam pariatur perferendis illo beatae hic aut rerum voluptatibus architecto. Assumenda magni, quasi neque sunt nemo eligendi, dolorum dolorem nesciunt animi voluptatem tempora autem, hic id saepe. Ipsam harum nihil, nemo saepe quidem doloribus consectetur officia aliquid quo. Temporibus consequatur dolore beatae nulla ea explicabo dolores nam, velit recusandae, iste quas. Facilis, repudiandae ea! Laborum, fugiat, error perferendis laboriosam, porro similique cum obcaecati nemo aut iste facere ullam. Eum optio quis, deleniti nam natus recusandae magni reiciendis sed vel asperiores! Eius laudantium atque quis facilis error doloribus nisi veritatis! Ipsa laboriosam, explicabo ut quidem delectus laudantium at, soluta alias doloribus aliquid quos maiores quam ipsam molestiae voluptatibus optio vel pariatur accusamus atque aspernatur, a tenetur? Distinctio, impedit illum! Aliquam consequuntur voluptate nihil amet laborum! Dolorum numquam quidem natus eum id incidunt error soluta sunt consectetur voluptates libero veritatis, debitis mollitia est nihil accusantium beatae sequi. Nulla odio et, rem explicabo voluptatem blanditiis reprehenderit nobis assumenda eaque accusantium voluptatibus nihil odit sint eius tempore est atque similique totam distinctio incidunt. Ipsam autem fuga, animi numquam officiis sit porro obcaecati laboriosam officia ad, iure nisi, voluptate quam quod non repellendus blanditiis ab! Est sint eligendi animi sit magnam rerum adipisci debitis repellendus laboriosam quaerat quisquam eius ad dicta temporibus porro saepe aliquid, veniam reprehenderit laudantium esse! Obcaecati et provident animi quos nobis fugit excepturi neque perferendis non. Labore fugit laudantium ex. Ea, illo aperiam sed optio placeat expedita debitis rem maxime voluptas, dolorem sint quibusdam explicabo voluptatibus nulla ipsam natus numquam dolorum temporibus! Delectus nihil ipsum recusandae voluptatem tempora, rem ipsa at quisquam accusamus dignissimos aliquam nostrum non pariatur saepe totam. Excepturi, veniam ipsam sit blanditiis labore similique vero esse, dignissimos nesciunt error distinctio iure, consequatur natus facilis atque ad! Blanditiis sapiente quia commodi enim corrupti! Delectus, sint voluptate assumenda adipisci tenetur dolores libero illum reiciendis, nihil odit dolorem numquam, id amet sequi. Placeat laborum similique ipsum delectus perspiciatis veritatis ab adipisci dolorum dignissimos veniam? Eius ab officia cupiditate omnis dolor, perferendis vel illum tenetur reprehenderit quis veritatis minima corrupti eos facilis libero voluptates odit, laborum necessitatibus aliquam! Tempora adipisci itaque asperiores explicabo dignissimos molestiae nulla neque laboriosam sapiente! Maxime non ut hic obcaecati harum blanditiis quo odio, autem itaque aperiam libero nulla quae, vero quos nobis, consequatur totam! Impedit repudiandae veniam rerum maxime odio voluptates consectetur a repellendus mollitia pariatur facere nihil enim, suscipit laboriosam sed hic tenetur nulla aliquid eius quibusdam consequuntur alias cupiditate quas? Dicta id sunt labore earum, fugiat ut eius, officia, tempora pariatur saepe cumque expedita corrupti esse atque obcaecati? Repellendus, inventore! Odio exercitationem architecto quibusdam ad consequuntur eum quas quasi similique ex odit omnis voluptatum hic, recusandae voluptate. Culpa repellat expedita delectus id veniam porro harum corporis dicta asperiores. Ut similique corporis accusantium tenetur sed ducimus at incidunt ullam maiores voluptate hic aut, officia, rerum ipsam.</p>
+        </div>
+    </div>
+    <!-- <button id="startButton">
+        <img src="Icons/refresh.png" alt="loading-icon" class="loading-icon">
+    </button> -->
+    <section class="content">
+        <div class="container">
+            
+            <div class="row grid grid-four-column">
+                <div class="col-md-4">
+                    <h4 class="counter-numbers" data-number="200">0</h4>
+                    <span>Institute</span>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="counter-numbers" data-number="3460">0</h4>
+                    <span>Admin</span>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="counter-numbers" data-number="746">0</h4>
+                    <span>Staff</span>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatum ab cupiditate aspernatur perferendis enim, placeat quod itaque blanditiis iusto laudantium ad fugiat. Vero dolores esse aut vitae accusamus, labore pariatur ad totam recusandae iste autem ipsa distinctio excepturi magnam cumque consectetur saepe assumenda sint aperiam obcaecati. Consequuntur non corporis illum consectetur placeat excepturi ullam dignissimos nulla. Magnam laborum expedita officiis vel est quia! Modi assumenda nesciunt, rerum earum beatae ipsam architecto sed in veritatis saepe dicta doloremque nobis excepturi explicabo illo? Dolor nesciunt, quod iure deleniti tenetur sit enim cum beatae officia vel et labore illum totam deserunt ipsum saepe. Est aperiam amet voluptate deserunt ex inventore! Tenetur id sint cum optio aliquid. Eligendi debitis excepturi, natus sed harum facilis fuga reprehenderit, unde a quod incidunt dicta pariatur laboriosam, vero omnis molestias optio? Odit sint sit reiciendis necessitatibus animi iusto dolore? Hic facere consequuntur explicabo eaque nemo nulla consectetur eligendi enim, quidem doloribus fuga voluptates saepe voluptate pariatur dolorem dignissimos at. Saepe magnam nobis optio ut, aperiam earum incidunt ea aliquam, in praesentium, eveniet excepturi aut velit quibusdam totam harum explicabo enim. Mollitia, eaque quae molestias eius maxime perferendis repudiandae repellat labore aliquid expedita, architecto in temporibus exercitationem. Earum, adipisci nemo exercitationem temporibus culpa modi et nulla quaerat, qui vitae possimus mollitia dolores deleniti similique quos? Ducimus assumenda voluptatem inventore reprehenderit esse sed, minima illum nisi exercitationem deserunt quis quisquam temporibus repellat et est provident placeat porro culpa perferendis voluptas ex delectus facilis saepe. Architecto officia, sapiente harum, delectus voluptatem necessitatibus sed dignissimos nulla modi impedit sit ex quod pariatur labore reprehenderit in eveniet ea, maiores ab illo. Animi, numquam? Atque consectetur, ea ducimus inventore qui minus eaque quo ut perferendis? Porro non exercitationem incidunt eveniet quia maiores fugiat ad, quisquam tenetur aperiam dignissimos. Id sequi, ratione minus consequuntur fugit, sed quod, nulla fuga praesentium maxime aliquam alias repellat iste tempora voluptates hic ad quis corrupti assumenda? Tempora, facilis. In dolores, debitis blanditiis quibusdam corporis veniam fugit tempora cupiditate. Dolorem, hic pariatur amet totam accusamus eveniet quo eius temporibus laudantium asperiores possimus excepturi animi nostrum, ducimus dolor doloribus quas perferendis earum velit unde. Quas commodi deleniti nisi dolorem laborum illo nesciunt hic pariatur provident magni alias, ipsa perferendis porro impedit non tempora quaerat assumenda saepe eaque et dolorum? Est repellat quidem vitae accusantium aperiam? Odio aliquam optio eum non nisi! Odio praesentium accusantium ab veritatis voluptas voluptate nisi libero, ullam totam facilis. Assumenda quos enim placeat. Corporis, excepturi aliquam eos inventore cupiditate omnis asperiores, nostrum esse, aut modi vitae? Veritatis animi expedita quis recusandae sequi veniam dignissimos dolores, voluptates, itaque reprehenderit, obcaecati nam in eligendi dolorem voluptatibus nisi cumque debitis delectus ab esse laudantium nobis eum. Illum enim similique iste porro quasi, velit debitis optio, doloribus ea cum soluta maxime? Asperiores saepe suscipit atque est inventore iste temporibus, aliquid unde porro explicabo quod molestias qui autem aut tempora exercitationem rem praesentium expedita odio! Repellat in, saepe minima velit fuga reiciendis eligendi delectus, laborum, praesentium ipsa obcaecati provident. Non, vitae?</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
